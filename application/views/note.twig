@@ -1,0 +1,18 @@
+{% for note in notes %}
+    <div class="note">
+        {% set img = note.getImageOfNote() %}
+        <img
+                src="{{ img?img.url:"https://sketchoholic.com/img/No_Image.jpg" }}"
+                alt="{{ img?"post image":"empty image" }}"
+        >
+        <h2>{{ note.name }}</h2>
+        <div class="noteNav">
+            {% if done is not defined %}
+                <a href="/change/{{ note.id }}">Change</a>
+                <a href="/done/{{ note.id }}">Make done</a>
+            {% endif %}
+            <a href="/delete/{{ note.id }}">Delete</a>
+            <a href="/view/{{ note.id }}">View details</a>
+        </div>
+    </div>
+{% endfor %}

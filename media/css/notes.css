@@ -1,0 +1,36 @@
+.note {
+    padding: 30px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    box-shadow: 1px 2px 5px black;
+    margin-bottom: 10px;
+}
+.note:hover {
+    box-shadow: -1px -2px 5px black;
+    background: #c16423;
+}
+.note img {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+}
+.note h2 {
+    font-size: 25px;
+    max-width: 40%;
+    overflow: hidden;
+}
+.note .noteNav {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+}
+.note .noteNav a{
+    color: #da000e;
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
